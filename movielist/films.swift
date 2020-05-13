@@ -12,7 +12,7 @@ struct Films
     var  title: String = ""
     var  release_dat: String = ""
     var poster_path : String = ""
-    //var  `Type` : String = ""
+    var name : String = ""
    var id : String = ""
     var overview = ""
     var credit_id = ""
@@ -31,6 +31,7 @@ struct Films
         overview = json["overview"].stringValue
         credit_id = json["cresit_id"].stringValue
         cast_id = json["cast_id"].stringValue
-        profile_path = json["poster_path"].stringValue
+        profile_path = json["profile_path"].stringValue
+        name = json["name"].stringValue
     }
 }

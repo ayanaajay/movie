@@ -31,7 +31,7 @@ class ViewController:UIViewController, UITableViewDataSource,UITableViewDelegate
             do{
                 let json = try JSON(data:data)
                 let results = json["results"]
-                 //print(json)
+               //  print(json)
                 for arr in results.arrayValue{
                    // print(arr["id"])
                    self.arrdata.append(Films(json: arr))
@@ -58,6 +58,7 @@ class ViewController:UIViewController, UITableViewDataSource,UITableViewDelegate
         let fulurl = baseUrl + imgUrl
         let url = URL(string: fulurl)
         let data = try? Data(contentsOf: url!)
+       // print(data)
         cell.imagee.image = UIImage(data: data!)
         return cell
     }
