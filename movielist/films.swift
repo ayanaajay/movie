@@ -1,0 +1,32 @@
+//
+//  films.swift
+//  movielist
+//
+//  Created by Ayana on 08/05/20.
+//  Copyright © 2020 Ayana. All rights reserved.
+//
+
+import Foundation
+struct Films
+{
+    var  title: String = ""
+    var  release_dat: String = ""
+    var poster_path : String = ""
+    //var  `Type` : String = ""
+   var id : String = ""
+    var overview = ""
+    var credit_id = ""
+    init()
+    {
+        
+    }
+    init(json : JSON)
+    {
+        title = json["title"].stringValue
+        release_dat = json["release_dat"].stringValue
+        poster_path = json["poster_path"].stringValue
+        id = json["id"].stringValue
+        overview = json["overview"].stringValue
+        credit_id = json["cresit_id"].stringValue
+    }
+}
