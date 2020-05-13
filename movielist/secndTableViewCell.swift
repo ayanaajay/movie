@@ -10,6 +10,7 @@ import UIKit
 
 class secndTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileimg: UIImageView!
     @IBOutlet weak var creditlabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

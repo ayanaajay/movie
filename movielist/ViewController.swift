@@ -53,8 +53,6 @@ class ViewController:UIViewController, UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.namelabel.text = arrdata[indexPath.item].title
-        //cell.namelabel.text = "hgh"
-       // cell.yearlabel.text = arrdata[indexPath.item].id
         let imgUrl = arrdata[indexPath.row].poster_path
         let baseUrl = "https://image.tmdb.org/t/p/w500"
         let fulurl = baseUrl + imgUrl
@@ -71,7 +69,6 @@ class ViewController:UIViewController, UITableViewDataSource,UITableViewDelegate
       second.overvw = arrdata[indexPath.row].overview
         second.name1 = arrdata[indexPath.row].title
         second.imdb1 = arrdata[indexPath.row].id
-        // self.present(third, animated: true, completion: nil)
         self.navigationController?.pushViewController(second, animated: true)
     }
 }

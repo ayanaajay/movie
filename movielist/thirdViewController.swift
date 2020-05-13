@@ -39,7 +39,7 @@ getcreditdata()
                 let cast = json["cast"]
                 print(json)
                 for arr in cast.arrayValue{
-                    print(arr["credit_id"])
+                    print(arr["cast_id"])
                     self.arrdata1.append(Films(json: arr))
                     
                 }
@@ -57,9 +57,17 @@ getcreditdata()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = secondtabeleview.dequeueReusableCell(withIdentifier: "secondcell", for: indexPath)
-    
-        return cell
+        let secondcell = secondtabeleview.dequeueReusableCell(withIdentifier: "secondcell") as! secndTableViewCell
+       secondcell.creditlabel.text = arrdata1[indexPath.row].cast_id
+       // secondcell.creditlabel.text = "gjgf"
+        print(arrdata1[indexPath.row].cast_id)
+        let imgUrl = arrdata1[indexPath.row].profile_path
+        let baseUrl = "https://image.tmdb.org/t/p/w500"
+        let fulurl = baseUrl + imgUrl
+        let url = URL(string: fulurl)
+        let data = try? Data(contentsOf: url!)
+        secondcell.profileimg.image = UIImage(data: data!)
+        return secondcell
     }
     
 

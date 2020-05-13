@@ -16,6 +16,8 @@ struct Films
    var id : String = ""
     var overview = ""
     var credit_id = ""
+    var cast_id = ""
+    var profile_path : String = ""
     init()
     {
         
@@ -28,5 +30,7 @@ struct Films
         id = json["id"].stringValue
         overview = json["overview"].stringValue
         credit_id = json["cresit_id"].stringValue
+        cast_id = json["cast_id"].stringValue
+        profile_path = json["poster_path"].stringValue
     }
 }
