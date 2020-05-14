@@ -29,7 +29,7 @@ getcreditdata()
     func getcreditdata()
     {
         let urlString = linkk.creditdomain
-        print(urlString)
+       // print(urlString)
         let url = URL(string: urlString)
         //print(url)
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -37,7 +37,7 @@ getcreditdata()
             do{
                 let json = try JSON(data:data)
                 let cast = json["cast"]
-            print(json)
+          //  print(json)
                 for arr in cast.arrayValue{
                     //print(arr["cast_id"])
                     self.arrdata1.append(Films(json: arr))

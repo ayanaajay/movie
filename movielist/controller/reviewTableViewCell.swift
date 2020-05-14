@@ -1,5 +1,5 @@
 //
-//  similarmovieTableViewCell.swift
+//  reviewTableViewCell.swift
 //  movielist
 //
 //  Created by Ayana on 14/05/20.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class similarmovieTableViewCell: UITableViewCell {
+class reviewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var contenttxt: UITextView!
+    @IBOutlet weak var authorlabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -26,6 +26,11 @@ class secondViewController: UIViewController {
         vcc.creditdata = imdb1
         self.navigationController?.pushViewController(vcc, animated: true)
     }
+    
+    @IBAction func similarmoview(_ sender: Any) {
+        let sim = self.storyboard?.instantiateViewController(withIdentifier: "similarvc") as! similarmovieViewController
+        self.navigationController?.pushViewController(sim, animated: true)
+    }
     // @IBOutlet weak var type: UILabel!
    // @IBOutlet weak var imdbid: UILabel!
 //    @IBOutlet weak var title: UILabel!
